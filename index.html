@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文字並び替えnPn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>文字並び替えnPn</h1>
+    
+    <div class="input-group">
+      <label for="char-input">文字を入力（例: A,B,C または ABC）</label>
+      <input type="text" id="char-input" placeholder="ここに入力..." autocomplete="off">
+      <small class="hint">※最大10文字推奨。多すぎると時間がかかります。</small>
+    </div>
+
+    <div class="button-group">
+      <button id="start-btn" class="btn-primary">計算スタート</button>
+      <button id="cancel-btn" class="btn-danger" disabled>中止</button>
+    </div>
+
+    <div class="progress-container" id="progress-container">
+      <span id="status-text">準備完了</span>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="results-container" id="results-container" style="display: none;">
+      <label>プレビュー（最初の500件）</label>
+      <div class="results-list" id="results-list"></div>
+      <button id="load-more-btn" class="btn-secondary" style="display: none; margin-top: 10px;">さらに500件表示</button>
+      
+      <div class="download-options">
+        <button id="download-txt" class="btn-success">.txtで保存</button>
+        <button id="download-md" class="btn-success">.mdで保存</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

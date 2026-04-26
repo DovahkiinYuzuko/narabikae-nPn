@@ -1,0 +1,6 @@
+.qodo/
+conductor/
+docs/
+.history/
+変数関数仕様書.md
+*.log
