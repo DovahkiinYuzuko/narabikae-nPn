@@ -42,6 +42,36 @@ body {
   border-radius: 12px;
   border: 1px solid var(--border);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  position: relative; /* 言語スイッチャーの基準用 */
+}
+
+.lang-switcher {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 4px;
+}
+
+.btn-lang {
+  padding: 4px 8px;
+  font-size: 11px;
+  background-color: var(--bg);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  flex: none; /* 幅が勝手に伸びないように */
+}
+
+.btn-lang.active {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.btn-lang:hover:not(.active) {
+  border-color: var(--accent);
 }
 
 h1 {
